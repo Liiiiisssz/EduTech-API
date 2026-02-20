@@ -7,13 +7,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
-<body class="font-[Montserrat] container mx-auto">
+<body id="body" class="bg-[#F9F9F9] font-[Montserrat] container mx-auto">
     <div class="mx-5 md:mx-10 lg:mx-15">
         <header>
             <div class="flex justify-between mt-5 mb-15 items-center">
                 <div class="flex items-center gap-2">
                     <img class="w-9" src="assets/logo.svg" alt="">
-                    <h1 class="font-bold text-xl">EduTech Academy</h1>
+                    <h1 class="text-[#3B82F6] font-bold text-xl">EduTech Academy</h1>
                 </div>
                 <div class="flex gap-5 lg:gap-10">
                     <nav>
@@ -22,90 +22,90 @@
                         </div>
                         <div class="hidden md:flex lg:flex">
                             <ul class="flex gap-3">
-                                <li><a href="">Home</a></li>
-                                <li><a href="">Cursos</a></li>
-                                <li><a href="">Matrícula</a></li>
-                                <li><a href="">Sobre</a></li>
+                                <li><a class="text-[#3B82F6] font-bold" href="">Home</a></li>
+                                <li><a class="texto text-[#1E1E1E]" href="">Cursos</a></li>
+                                <li><a class="texto text-[#1E1E1E]" href="">Matrícula</a></li>
+                                <li><a class="texto text-[#1E1E1E]" href="">Sobre</a></li>
                             </ul>
                         </div>
                     </nav>
-                    <img class="hidden md:block lg:block" src="assets/moon.svg" alt="Troca o tema">
+                    <img id="tema" onclick="trocarTema()" class="hidden md:block lg:block" src="assets/moon.svg" alt="Troca o tema">
                 </div>
             </div>
         </header>
     
         <main>
             <section class="text-center">
-                <h2 class="font-extrabold text-3xl mb-5">Construa seu futuro com a EduTech Academy</h2>
-                <p class="text-lg mb-15">Cursos de alta qualidade para impulsionar sua carreira 
+                <h2 class="texto text-[#1E1E1E] font-extrabold text-3xl mb-5">Construa seu futuro com a EduTech Academy</h2>
+                <p class="texto text-[#1E1E1E] text-lg mb-15">Cursos de alta qualidade para impulsionar sua carreira 
                     e transformar sua vida profissional.</p>
             </section>
 
             <section>
-                <h3 class="font-bold text-xl mb-7">Nossos cursos</h3>
+                <h3 class="texto text-[#1E1E1E] font-bold text-xl mb-7">Nossos cursos</h3>
     
-                <div class="md:flex md:flex-wrap lg:flex justify-between">
-                    <div class="rounded-md overflow-hidden shadow-sm mb-5 md:max-w-xs lg:max-w-xs">
+                <div class="md:flex md:flex-wrap justify-between md:mb-30">
+                    <div class="card rounded-md overflow-hidden shadow-sm mb-5 md:max-w-xs lg:max-w-xs">
                         <img src="assets/fullstack.jpg" alt="Desenvolvimento Web Fullstack">
                         <div class="m-5 md:h-38 lg:h-38">
-                            <h4 class="font-bold">Desenvolvimento Web Fullstack</h4>
+                            <h4 class="texto text-[#1E1E1E] font-bold">Desenvolvimento Web Fullstack</h4>
                             <div class="flex gap-1">
                                 <img class="w-5" src="assets/clock.svg" alt="Relógio tempo de curso">
-                                <p>120 horas</p>
+                                <p class="texto text-[#1E1E1E]">120 horas</p>
                             </div>
                             <div class="flex gap-1 mb-5">
                                 <img class="w-5" src="assets/map-pin.svg" alt="Pin de mapa">
-                                <p>EAD</p>
+                                <p class="texto text-[#1E1E1E]">EAD</p>
                             </div>
-                            <button class="w-full rounded-md py-1.5 font-semibold md:mt-6 lg:mt-6" type="button">Ver detalhes</button>
+                            <button class="bg-[#0077CC] text-[#F9F9F9] w-full rounded-md py-1.5 font-semibold md:mt-6 lg:mt-6" type="button">Ver detalhes</button>
                         </div>
                     </div>
         
-                    <div class="rounded-md overflow-hidden shadow-sm mb-5 md:max-w-xs lg:max-w-xs">
+                    <div class="card rounded-md overflow-hidden shadow-sm mb-5 md:max-w-xs lg:max-w-xs">
                         <img src="assets/data-science.jpg" alt="Data Science & Machine Learning">
                         <div class="m-5">
-                            <h4 class="font-bold">Data Science & Machine Learning</h4>
+                            <h4 class="texto text-[#1E1E1E] font-bold">Data Science & Machine Learning</h4>
                             <div class="flex gap-1">
                                 <img class="w-5" src="assets/clock.svg" alt="Relógio tempo de curso">
-                                <p>100 horas</p>
+                                <p class="texto text-[#1E1E1E]">100 horas</p>
                             </div>
                             <div class="flex gap-1 mb-5">
                                 <img class="w-5" src="assets/map-pin.svg" alt="Pin de mapa">
-                                <p>Presencial</p>
+                                <p class="texto text-[#1E1E1E]">Presencial</p>
                             </div>
-                            <button class="w-full rounded-md py-1.5 font-semibold" type="button">Ver detalhes</button>
+                            <button class="bg-[#0077CC] text-[#F9F9F9] w-full rounded-md py-1.5 font-semibold" type="button">Ver detalhes</button>
                         </div>
                     </div>
         
-                    <div class="rounded-md overflow-hidden shadow-sm mb-5 md:max-w-xs lg:max-w-xs">
+                    <div class="card rounded-md overflow-hidden shadow-sm mb-5 md:max-w-xs lg:max-w-xs">
                         <img src="assets/marketing.jpg" alt="Marketing Digital & SEO">
                         <div class="m-5 md:h-38 lg:h-38">
-                            <h4 class="font-bold">Marketing Digital & SEO</h4>
+                            <h4 class="texto text-[#1E1E1E] font-bold">Marketing Digital & SEO</h4>
                             <div class="flex gap-1">
                                 <img class="w-5" src="assets/clock.svg" alt="Relógio tempo de curso">
-                                <p>80 horas</p>
+                                <p class="texto text-[#1E1E1E]">80 horas</p>
                             </div>
                             <div class="flex gap-1 mb-5">
                                 <img class="w-5" src="assets/map-pin.svg" alt="Pin de mapa">
-                                <p>EAD</p>
+                                <p class="texto text-[#1E1E1E]">EAD</p>
                             </div>
-                            <button class="w-full rounded-md py-1.5 font-semibold md:mt-6 lg:mt-6" type="button">Ver detalhes</button>
+                            <button class="bg-[#0077CC] text-[#F9F9F9] w-full rounded-md py-1.5 font-semibold md:mt-6 lg:mt-6" type="button">Ver detalhes</button>
                         </div>
                     </div>
         
-                    <div class="rounded-md overflow-hidden shadow-sm mb-15 md:mb-5 lg:mb-5 md:max-w-xs lg:max-w-xs">
+                    <div class="card rounded-md overflow-hidden shadow-sm mb-15 md:mb-5 lg:mb-5 md:max-w-xs lg:max-w-xs">
                         <img src="assets/ux-design.jpg" alt="UX/UI Design">
                         <div class="m-5 md:h-38 lg:h-38">
-                            <h4 class="font-bold">UX/UI Design</h4>
+                            <h4 class="texto text-[#1E1E1E] font-bold">UX/UI Design</h4>
                             <div class="flex gap-1">
                                 <img class="w-5" src="assets/clock.svg" alt="Relógio tempo de curso">
-                                <p>90 horas</p>
+                                <p class="texto text-[#1E1E1E]">90 horas</p>
                             </div>
                             <div class="flex gap-1 mb-5">
                                 <img class="w-5" src="assets/map-pin.svg" alt="Pin de mapa">
-                                <p>Presencial</p>
+                                <p class="texto text-[#1E1E1E]">Presencial</p>
                             </div>
-                            <button class="w-full rounded-md py-1.5 font-semibold md:mt-6 lg:mt-6" type="button">Ver detalhes</button>
+                            <button class="bg-[#0077CC] text-[#F9F9F9] w-full rounded-md py-1.5 font-semibold md:mt-6 lg:mt-6" type="button">Ver detalhes</button>
                         </div>
                     </div>
                 </div>
@@ -113,29 +113,29 @@
     
             <div class="mb-25 md:flex lg:flex md:justify-between">
                 <section class="mb-25 container max-w-lg lg:max-w-xl">
-                    <h3 class="font-bold text-xl mb-7">Matrícula</h3>
-                    <div class="p-5 border border-gray-200 rounded-md">
-                        <p class="font-bold text-lg mb-5">Formulário de Matrícula</p>
+                    <h3 class="texto text-[#1E1E1E] font-bold text-xl mb-7">Matrícula</h3>
+                    <div class="card2 p-5 border border-gray-200 rounded-md">
+                        <p class="texto text-[#1E1E1E] font-bold text-lg mb-5">Formulário de Matrícula</p>
                         <form action="" method="post">
                             <div class="mb-5">
-                                <label class="text-sm font-semibold" for="nome">Nome Completo *</label>
+                                <label class="texto text-[#1E1E1E] text-sm font-semibold" for="nome">Nome Completo *</label>
                                 <input class="border rounded-md border-gray-200 pl-2 py-1 w-full" type="text" name="nome" placeholder="Digite seu nome" required>
                             </div>
                             <div class="mb-5">
-                                <label class="text-sm font-semibold" for="email">Email *</label>
+                                <label class="texto text-[#1E1E1E] text-sm font-semibold" for="email">Email *</label>
                                 <input class="border rounded-md border-gray-200 pl-2 py-1 w-full" type="email" name="email" placeholder="Digite seu email" required>
                             </div>
                             <div class="mb-5">
-                                <label class="text-sm font-semibold" for="telefone">Telefone *</label>
+                                <label class="texto text-[#1E1E1E] text-sm font-semibold" for="telefone">Telefone *</label>
                                 <input class="border rounded-md border-gray-200 pl-2 py-1 w-full" type="tel" name="telefone" placeholder="(00) 00000-0000" required>
                             </div>
                             <div class="mb-5"> 
-                                <label class="text-sm font-semibold" for="cpf">CPF *</label>
+                                <label class="texto text-[#1E1E1E] text-sm font-semibold" for="cpf">CPF *</label>
                                 <input class="border rounded-md border-gray-200 pl-2 py-1 w-full" type="text" name="cpf" placeholder="CPF" required>
                             </div>
                             <div class="mb-5">
-                                <label class="text-sm font-semibold" for="curso">Curso Desejado *</label>
-                                <select class="border rounded-md border-gray-200 pl-2 py-1 w-full text-sm" name="curso" id="">
+                                <label class="texto text-[#1E1E1E] text-sm font-semibold" for="curso">Curso Desejado *</label>
+                                <select class="card2 border rounded-md border-gray-200 pl-2 py-1 w-full text-sm" name="curso" id="">
                                     <option value="fullstack">Desenvolvimento Web Fullstack</option>
                                     <option value="data-science">Data Science & Machine Learning</option>
                                     <option value="marketing">Marketing Digital & SEO</option>
@@ -143,63 +143,63 @@
                                 </select>
                             </div>
                             <div class="mb-5">
-                                <label class="text-sm font-semibold" for="cep">CEP *</label>
-                                <input class="border rounded-md border-gray-200 pl-2 py-1 w-full" type="text" name="cep" placeholder="00000-000" required>
+                                <label class="texto text-[#1E1E1E] text-sm font-semibold" for="cep">CEP *</label>
+                                <input id="cep" onblur="buscarCep()" class="border rounded-md border-gray-200 pl-2 py-1 w-full" type="text" name="cep" placeholder="00000-000" required>
                             </div>
                             <div class="mb-5">
-                                <label class="text-sm font-semibold" for="rua">Rua *</label>
-                                <input class="border rounded-md border-gray-200 pl-2 py-1 w-full" type="text" name="rua" required>
+                                <label class="texto text-[#1E1E1E] text-sm font-semibold" for="rua">Rua *</label>
+                                <input id="rua" class="border rounded-md border-gray-200 pl-2 py-1 w-full" type="text" name="rua" required>
                             </div>
                             <div class="mb-5">
-                                <label class="text-sm font-semibold" for="bairro">Bairro *</label>
-                                <input class="border rounded-md border-gray-200 pl-2 py-1 w-full" type="text" name="bairro" required>
+                                <label class="texto text-[#1E1E1E] text-sm font-semibold" for="bairro">Bairro *</label>
+                                <input id="bairro" class="border rounded-md border-gray-200 pl-2 py-1 w-full" type="text" name="bairro" required>
                             </div>
                             <div class="mb-5">
-                                <label class="text-sm font-semibold" for="cidade">Cidade *</label>
-                                <input class="border rounded-md border-gray-200 pl-2 py-1 w-full" type="text" name="cidade" required>
+                                <label class="texto text-[#1E1E1E] text-sm font-semibold" for="cidade">Cidade *</label>
+                                <input id="cidade" class="border rounded-md border-gray-200 pl-2 py-1 w-full" type="text" name="cidade" required>
                             </div>
                             <div class="mb-7">
-                                <label class="text-sm font-semibold" for="estado">Estado *</label>
-                                <input class="border rounded-md border-gray-200 pl-2 py-1 w-full" type="text" name="estado" required>
+                                <label class="texto text-[#1E1E1E] text-sm font-semibold" for="estado">Estado *</label>
+                                <input id="estado" class="border rounded-md border-gray-200 pl-2 py-1 w-full" type="text" name="estado" required>
                             </div>
-                            <button class="w-full rounded-md py-1.5 font-semibold" type="submit">Enviar Matrícula</button>
+                            <button class=" bg-[#0077CC] text-[#F9F9F9] w-full rounded-md py-1.5 font-semibold">Enviar Matrícula</button>
                         </form>
                     </div>
                 </section>
     
-                <section class="container max-w-xs max-h-78 p-5 py-6 border border-gray-200 rounded-md">
-                    <p class="font-bold mb-5">Áreas do Conhecimento</p>
+                <section class="card2 container max-w-2xs lg:max-w-xs max-h-78 p-5 py-6 border border-gray-200 rounded-md">
+                    <p class="texto text-[#1E1E1E] font-bold mb-5">Áreas do Conhecimento</p>
                     <ul class="flex flex-col gap-1">
-                        <li>Tecnologia da Informação</li>
-                        <li>Administração e Negócios</li>
-                        <li>Marketing Digital</li>
-                        <li>Design Gráfico</li>
-                        <li>Engenharia</li>
-                        <li>Saúde</li>
-                        <li>Educação</li>
-                        <li>Gastronomia</li>
+                        <li class="texto text-[#1E1E1E]">Tecnologia da Informação</li>
+                        <li class="texto text-[#1E1E1E]">Administração e Negócios</li>
+                        <li class="texto text-[#1E1E1E]">Marketing Digital</li>
+                        <li class="texto text-[#1E1E1E]">Design Gráfico</li>
+                        <li class="texto text-[#1E1E1E]">Engenharia</li>
+                        <li class="texto text-[#1E1E1E]">Saúde</li>
+                        <li class="texto text-[#1E1E1E]">Educação</li>
+                        <li class="texto text-[#1E1E1E]">Gastronomia</li>
                     </ul>
                 </section>
             </div>
         </main>
     
         <footer>
-            <div class="flex flex-col text-center gap-7 md:flex-row lg:flex-row">
+            <div class="flex flex-col text-center gap-7 md:grid md:grid-cols-3 md:mb-15">
                 <div>
-                    <p class="font-bold mb-3">EduTech Academy</p>
-                    <p class="text-sm">Transformando carreiras através da educação de qualidade desde 2010.</p>
+                    <p class="texto text-[#1E1E1E] font-bold mb-3">EduTech Academy</p>
+                    <p class="texto text-[#1E1E1E] footerT text-sm">Transformando carreiras através da educação de qualidade desde 2010.</p>
                 </div>
                 <div>
-                    <p class="font-bold mb-3">Contato</p>
+                    <p class="texto text-[#1E1E1E] font-bold mb-3">Contato</p>
                     <div class="flex text-sm gap-2 items-center justify-center mb-2">
                         <img class="w-4" src="assets/phone.svg" alt="Telefone">
-                        <p>(11) 99999-9999</p>
+                        <p class="texto text-[#1E1E1E] footerT">(11) 99999-9999</p>
                     </div>
-                    <p class="text-sm">contato@edutechacademy.com.br</p>
-                    <p class="text-sm">Av. Paulista, 1000 - São Paulo/SP</p>
+                    <p class="texto text-[#1E1E1E] footerT text-sm">contato@edutechacademy.com.br</p>
+                    <p class="texto text-[#1E1E1E] footerT text-sm">Av. Paulista, 1000 - São Paulo/SP</p>
                 </div>
                 <div>
-                    <p class="font-bold mb-3">Redes Sociais</p>
+                    <p class="texto text-[#1E1E1E] font-bold mb-3">Redes Sociais</p>
                     <div class="flex gap-4 items-center justify-center mb-15">
                         <img class="w-5" src="assets/facebook.svg" alt="Facebook icon">
                         <img class="w-5" src="assets/instagram.svg" alt="Instagram icon">
@@ -208,7 +208,7 @@
                     </div>
                 </div>
             </div>
-            <p class="text-center text-sm mb-10">© 2025 EduTech Academy. Todos os direitos reservados.</p>
+            <p class="texto text-[#1E1E1E] footerT text-center text-sm mb-10">© 2025 EduTech Academy. Todos os direitos reservados.</p>
         </footer>
     </div>
     
