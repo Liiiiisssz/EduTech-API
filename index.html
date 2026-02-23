@@ -112,62 +112,69 @@
             </section>
     
             <div class="mb-25 md:flex lg:flex md:justify-between">
-                <section class="mb-25 container max-w-lg lg:max-w-xl">
+                <section class="mb-25 mx-auto md:mx-0 lg:mx-0 container max-w-lg lg:max-w-xl">
                     <h3 class="texto text-[#1E1E1E] font-bold text-xl mb-7">Matrícula</h3>
                     <div class="card2 p-5 border border-gray-200 rounded-md">
                         <p class="texto text-[#1E1E1E] font-bold text-lg mb-5">Formulário de Matrícula</p>
                         <form action="" method="post">
-                            <div class="mb-5">
-                                <label class="texto text-[#1E1E1E] text-sm font-semibold" for="nome">Nome Completo *</label>
-                                <input class="border rounded-md border-gray-200 pl-2 py-1 w-full" type="text" name="nome" placeholder="Digite seu nome" required>
+                            <div class="lg:grid lg:grid-cols-2 lg:gap-7">
+                                <div>
+                                    <div class="mb-5">
+                                        <label class="texto text-[#1E1E1E] text-sm font-semibold" for="nome">Nome Completo *</label>
+                                        <input class="border rounded-md border-gray-200 pl-2 py-1 w-full" type="text" name="nome" placeholder="Digite seu nome" required>
+                                    </div>
+                                    <div class="mb-5">
+                                        <label class="texto text-[#1E1E1E] text-sm font-semibold" for="email">Email *</label>
+                                        <input class="border rounded-md border-gray-200 pl-2 py-1 w-full" type="email" name="email" placeholder="Digite seu email" required>
+                                    </div>
+                                    <div class="mb-5">
+                                        <label class="texto text-[#1E1E1E] text-sm font-semibold" for="telefone">Telefone *</label>
+                                        <input class="border rounded-md border-gray-200 pl-2 py-1 w-full" type="tel" name="telefone" placeholder="(00) 00000-0000" required>
+                                    </div>
+                                    <div class="mb-5"> 
+                                        <label class="texto text-[#1E1E1E] text-sm font-semibold" for="cpf">CPF *</label>
+                                        <input class="border rounded-md border-gray-200 pl-2 py-1 w-full" type="text" name="cpf" placeholder="CPF" required>
+                                    </div>
+                                    <div class="mb-5">
+                                        <label class="texto text-[#1E1E1E] text-sm font-semibold" for="curso">Curso Desejado *</label>
+                                        <select class="card2 border rounded-md border-gray-200 pl-2 py-1 w-full text-sm" name="curso" id="">
+                                            <option value="fullstack">Desenvolvimento Web Fullstack</option>
+                                            <option value="data-science">Data Science & Machine Learning</option>
+                                            <option value="marketing">Marketing Digital & SEO</option>
+                                            <option value="ux-design">UX/UI Design</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="mb-5">
+                                        <label class="texto text-[#1E1E1E] text-sm font-semibold" for="cep">CEP *</label>
+                                        <input id="cep" onblur="buscarCep()" class="border rounded-md border-gray-200 pl-2 py-1 w-full" type="text" name="cep" placeholder="00000-000" required>
+                                    </div>
+                                    <div class="mb-5">
+                                        <label class="texto text-[#1E1E1E] text-sm font-semibold" for="rua">Rua *</label>
+                                        <input id="rua" class="border rounded-md border-gray-200 pl-2 py-1 w-full" type="text" name="rua" required>
+                                    </div>
+                                    <div class="mb-5">
+                                        <label class="texto text-[#1E1E1E] text-sm font-semibold" for="bairro">Bairro *</label>
+                                        <input id="bairro" class="border rounded-md border-gray-200 pl-2 py-1 w-full" type="text" name="bairro" required>
+                                    </div>
+                                    <div class="mb-5">
+                                        <label class="texto text-[#1E1E1E] text-sm font-semibold" for="cidade">Cidade *</label>
+                                        <input id="cidade" class="border rounded-md border-gray-200 pl-2 py-1 w-full" type="text" name="cidade" required>
+                                    </div>
+                                    <div class="mb-7">
+                                        <label class="texto text-[#1E1E1E] text-sm font-semibold" for="estado">Estado *</label>
+                                        <input id="estado" class="border rounded-md border-gray-200 pl-2 py-1 w-full" type="text" name="estado" required>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="mb-5">
-                                <label class="texto text-[#1E1E1E] text-sm font-semibold" for="email">Email *</label>
-                                <input class="border rounded-md border-gray-200 pl-2 py-1 w-full" type="email" name="email" placeholder="Digite seu email" required>
-                            </div>
-                            <div class="mb-5">
-                                <label class="texto text-[#1E1E1E] text-sm font-semibold" for="telefone">Telefone *</label>
-                                <input class="border rounded-md border-gray-200 pl-2 py-1 w-full" type="tel" name="telefone" placeholder="(00) 00000-0000" required>
-                            </div>
-                            <div class="mb-5"> 
-                                <label class="texto text-[#1E1E1E] text-sm font-semibold" for="cpf">CPF *</label>
-                                <input class="border rounded-md border-gray-200 pl-2 py-1 w-full" type="text" name="cpf" placeholder="CPF" required>
-                            </div>
-                            <div class="mb-5">
-                                <label class="texto text-[#1E1E1E] text-sm font-semibold" for="curso">Curso Desejado *</label>
-                                <select class="card2 border rounded-md border-gray-200 pl-2 py-1 w-full text-sm" name="curso" id="">
-                                    <option value="fullstack">Desenvolvimento Web Fullstack</option>
-                                    <option value="data-science">Data Science & Machine Learning</option>
-                                    <option value="marketing">Marketing Digital & SEO</option>
-                                    <option value="ux-design">UX/UI Design</option>
-                                </select>
-                            </div>
-                            <div class="mb-5">
-                                <label class="texto text-[#1E1E1E] text-sm font-semibold" for="cep">CEP *</label>
-                                <input id="cep" onblur="buscarCep()" class="border rounded-md border-gray-200 pl-2 py-1 w-full" type="text" name="cep" placeholder="00000-000" required>
-                            </div>
-                            <div class="mb-5">
-                                <label class="texto text-[#1E1E1E] text-sm font-semibold" for="rua">Rua *</label>
-                                <input id="rua" class="border rounded-md border-gray-200 pl-2 py-1 w-full" type="text" name="rua" required>
-                            </div>
-                            <div class="mb-5">
-                                <label class="texto text-[#1E1E1E] text-sm font-semibold" for="bairro">Bairro *</label>
-                                <input id="bairro" class="border rounded-md border-gray-200 pl-2 py-1 w-full" type="text" name="bairro" required>
-                            </div>
-                            <div class="mb-5">
-                                <label class="texto text-[#1E1E1E] text-sm font-semibold" for="cidade">Cidade *</label>
-                                <input id="cidade" class="border rounded-md border-gray-200 pl-2 py-1 w-full" type="text" name="cidade" required>
-                            </div>
-                            <div class="mb-7">
-                                <label class="texto text-[#1E1E1E] text-sm font-semibold" for="estado">Estado *</label>
-                                <input id="estado" class="border rounded-md border-gray-200 pl-2 py-1 w-full" type="text" name="estado" required>
-                            </div>
+                            
                             <button class=" bg-[#0077CC] text-[#F9F9F9] w-full rounded-md py-1.5 font-semibold">Enviar Matrícula</button>
                         </form>
                     </div>
                 </section>
     
-                <section class="card2 container max-w-2xs lg:max-w-xs max-h-78 p-5 py-6 border border-gray-200 rounded-md">
+                <section class="card2 container mx-auto md:mx-0 lg:mx-0 max-w-2xs lg:max-w-xs max-h-78 p-5 py-6 border border-gray-200 rounded-md">
                     <p class="texto text-[#1E1E1E] font-bold mb-5">Áreas do Conhecimento</p>
                     <ul class="flex flex-col gap-1">
                         <li class="texto text-[#1E1E1E]">Tecnologia da Informação</li>

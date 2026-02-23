@@ -11,8 +11,6 @@
     --spacing: 0.25rem;
     --container-2xs: 18rem;
     --container-xs: 20rem;
-    --container-sm: 24rem;
-    --container-md: 28rem;
     --container-lg: 32rem;
     --container-xl: 36rem;
     --text-sm: 0.875rem;
@@ -263,9 +261,6 @@
   .max-w-lg {
     max-width: var(--container-lg);
   }
-  .max-w-xs {
-    max-width: var(--container-xs);
-  }
   .border-collapse {
     border-collapse: collapse;
   }
@@ -330,9 +325,6 @@
   .bg-\[\#0077CC\] {
     background-color: #0077CC;
   }
-  .bg-\[\#F9F9F9\#F9F9F9\] {
-    background-color: #F9F9F9#F9F9F9;
-  }
   .bg-\[\#F9F9F9\] {
     background-color: #F9F9F9;
   }
@@ -381,17 +373,9 @@
     --tw-font-weight: var(--font-weight-extrabold);
     font-weight: var(--font-weight-extrabold);
   }
-  .font-light {
-    --tw-font-weight: var(--font-weight-light);
-    font-weight: var(--font-weight-light);
-  }
   .font-semibold {
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
-  }
-  .font-thin {
-    --tw-font-weight: var(--font-weight-thin);
-    font-weight: var(--font-weight-thin);
   }
   .text-\[\#1E1E1E\] {
     color: #1E1E1E;
@@ -399,42 +383,11 @@
   .text-\[\#3B82F6\] {
     color: #3B82F6;
   }
-  .text-\[\#4DA6FF\] {
-    color: #4DA6FF;
-  }
-  .text-\[\#0077CC\] {
-    color: #0077CC;
-  }
   .text-\[\#F9F9F9\] {
     color: #F9F9F9;
   }
-  .text-current {
-    color: currentcolor;
-  }
-  .text-current\/50 {
-    color: currentcolor;
-    @supports (color: color-mix(in lab, red, red)) {
-      color: color-mix(in oklab, currentcolor 50%, transparent);
-    }
-  }
-  .text-transparent {
-    color: transparent;
-  }
   .underline {
     text-decoration-line: underline;
-  }
-  .placeholder-\[\#F9F9F9\] {
-    &::placeholder {
-      color: #F9F9F9;
-    }
-  }
-  .placeholder-\[\#F9F9F9\]\/60 {
-    &::placeholder {
-      color: color-mix(in oklab, #F9F9F9 60%, transparent);
-    }
-  }
-  .opacity-50 {
-    opacity: 50%;
   }
   .opacity-60 {
     opacity: 60%;
@@ -446,6 +399,11 @@
   .outline {
     outline-style: var(--tw-outline-style);
     outline-width: 1px;
+  }
+  .md\:mx-0 {
+    @media (width >= 48rem) {
+      margin-inline: calc(var(--spacing) * 0);
+    }
   }
   .md\:mx-10 {
     @media (width >= 48rem) {
@@ -465,11 +423,6 @@
   .md\:mb-15 {
     @media (width >= 48rem) {
       margin-bottom: calc(var(--spacing) * 15);
-    }
-  }
-  .md\:mb-20 {
-    @media (width >= 48rem) {
-      margin-bottom: calc(var(--spacing) * 20);
     }
   }
   .md\:mb-30 {
@@ -522,6 +475,11 @@
       justify-content: space-between;
     }
   }
+  .lg\:mx-0 {
+    @media (width >= 64rem) {
+      margin-inline: calc(var(--spacing) * 0);
+    }
+  }
   .lg\:mx-15 {
     @media (width >= 64rem) {
       margin-inline: calc(var(--spacing) * 15);
@@ -572,14 +530,24 @@
       max-width: var(--container-xs);
     }
   }
-  .lg\:grid-cols-3 {
+  .lg\:grid-cols-2 {
     @media (width >= 64rem) {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
   }
-  .lg\:flex-row {
+  .lg\:gap-3 {
     @media (width >= 64rem) {
-      flex-direction: row;
+      gap: calc(var(--spacing) * 3);
+    }
+  }
+  .lg\:gap-5 {
+    @media (width >= 64rem) {
+      gap: calc(var(--spacing) * 5);
+    }
+  }
+  .lg\:gap-7 {
+    @media (width >= 64rem) {
+      gap: calc(var(--spacing) * 7);
     }
   }
   .lg\:gap-10 {
